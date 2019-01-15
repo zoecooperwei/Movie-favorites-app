@@ -1,0 +1,8 @@
+.wrapper {
+    /* really important to define min-height to show the background image */
+    /* min-height: 700px;
+    background: url(../assets/img/bg.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; */
+}

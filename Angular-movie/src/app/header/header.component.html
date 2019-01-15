@@ -1,0 +1,14 @@
+<!-- Main Header -->
+<div class="header">
+  <nav class="px-5 navbar navbar-expand-sm navbar-dark fixed-top">
+      <div class="navbar-brand">Angular-Movies</div>
+    <!-- display links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngFor="let list of navlist">
+            <a class="nav-link btn" (click)="nav(list)">
+                {{list.name}}
+            </a>
+        </li>
+      </ul>
+  </nav>
+</div>

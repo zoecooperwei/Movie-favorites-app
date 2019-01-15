@@ -1,0 +1,46 @@
+<!-- Movie lists content -->
+<div class="pt-5 movies">
+  <!-- Searchbox -->
+  <div class="pt-5" style="margin: auto">
+    <div class="searchbox text-center pb-5">
+      <input style="margin:0" #myValue type="text" name="table_search" 
+      placeholder="movie name.." id="movieName">
+      <button (click)="filter(myValue.value)" type="submit" id="search_button"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <!-- Movie table -->
+  <div class="movielist px-5 mx-5">
+    <div class="create text-right">
+      <a class="btn" (click)="create()">
+          <span><i class="fas fa-plus"></i> New</span>
+      </a>
+    </div>
+    <table class="table table-dark table-striped table-borderless">
+      <thead>
+        <tr>
+          <!-- <th style="width: 10px">movies</th> -->
+          <th>Name</th>
+          <th>Year</th>
+          <th>Director</th>
+          <th>Rating</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies | async">
+          <!-- <td>{{movie.id}}</td> -->
+          <td>{{ movie.name }}</td>
+          <td>{{ movie.year }}</td>
+          <td>{{ movie.director }}</td>
+          <td><app-heart [rating]="movie.rating"></app-heart></td>
+          <td>
+            <a class="btn badge" (click)="edit(movie)"><span><i class="fas fa-user-edit" style="font-size: 18px"></i></span></a>
+            <a class="btn badge" (click)="delete(movie)"><span><i class="far fa-trash-alt" style="font-size: 18px"></i></span></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

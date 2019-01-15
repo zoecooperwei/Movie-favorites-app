@@ -1,0 +1,42 @@
+.hasError {
+    border: 1px solid crimson;
+}
+
+.noCategory {
+    color: crimson;
+}
+
+.hidden {
+    display:none;
+}
+
+.movieinfo{
+	font-size: 15px;
+	letter-spacing: 0.05pc;
+	color: #fff;
+	height: 30px;	
+	padding: 0;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	transition: 1s;
+	transition-timing-function: ease-in-out;
+}
+
+.moviearea {
+    font-size: 15px;
+	letter-spacing: 0.05pc;
+	color: #fff;
+	padding: 0;
+	border: 1px solid white;
+	background-color: transparent;
+	transition: 1s;
+	transition-timing-function: ease-in-out;
+}
+
+.moviearea:focus, .movieinfo:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}

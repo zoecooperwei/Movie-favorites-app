@@ -1,0 +1,94 @@
+<!-- Movie form page -->
+<div class="pt-5 mx-auto">
+  <div class="movie-form mx-auto px-5">
+    <!-- page title -->
+    <div class="px-5" style="color:#fff">
+      <h3>Movie Info</h3>
+    </div>
+    <!-- form start -->
+    <div class="d-flex h-100 col-sm-12 pt-3">
+      <div class="mx-auto">
+        <form [formGroup]="movieForm" class="mx-auto px-5 justify-content-center" style="width:500px; color: #fff">
+          <!-- movie name -->
+          <div class="form-group pt-3">
+            <label for="name" class="col-sm-5 control-label">Movie name</label>
+            <div class="col-sm-12 text-center">
+              <input formControlName="movieName" type="text" class="form-control movieinfo" id="name" placeholder="movie name..">
+            </div>
+            <!-- name validation -->
+            <div class="text-warning pl-3 pt-3" *ngIf="movieForm.get('movieName').touched && movieForm.get('movieName').invalid">
+              <p style="font-size: 14px" *ngIf="movieForm.get('movieName').errors.required">
+                  Name is required.
+              </p>
+              <p style="font-size: 14px" *ngIf="movieForm.get('movieName').errors.minlength">
+                  Name must be at least 4 characters long.
+              </p>
+              <p style="font-size: 14px" *ngIf="movieForm.get('movieName').errors.char">
+                  Name must be characters.
+              </p>
+            </div>
+          </div>
+
+          <!-- movie year -->
+          <div class="form-group">
+            <label for="year" class="col-sm-5 control-label">Movie year</label>
+            <div class="col-sm-12">
+              <input formControlName="movieYear" type="number" class="form-control movieinfo" id="year" placeholder="movie year..">
+            </div>
+            <!-- year validation -->
+            <div class="text-warning pl-3 pt-3" *ngIf="movieForm.get('movieYear').touched && movieForm.get('movieYear').invalid">
+              <p style="font-size: 14px" *ngIf="movieForm.get('movieYear').errors.required">
+                  Year is required.
+              </p>
+            </div>
+          </div>
+
+          <!-- movie director -->
+          <div class="form-group">
+            <label for="director" class="col-sm-5 control-label">Movie director</label>
+            <div class="col-sm-12">
+              <input formControlName="movieDirector" type="text" class="form-control movieinfo" id="director" placeholder="movie director..">
+            </div>
+            <!-- director validation -->
+            <div class="text-warning pl-3 pt-3" *ngIf="movieForm.get('movieDirector').touched && movieForm.get('movieDirector').invalid">
+              <p style="font-size: 14px" *ngIf="movieForm.get('movieDirector').errors.required">
+                  Director is required.
+              </p>
+              <p style="font-size: 14px" *ngIf="movieForm.get('movieDirector').errors.char">
+                  Director must be characters.
+              </p>
+            </div>
+          </div>
+
+          <!-- movie rating -->
+          <div class="form-group">
+            <label for="rating" class="col-sm-5 control-label">Movie rating</label>
+            <div class="col-sm-12">
+              <app-heart [rating]="movie.rating" [readonly]="false" (ratingupdate)="updateRating($event)"></app-heart>
+            </div>
+          </div>
+
+          <!-- movie description -->
+          <div class="form-group pb-3">
+            <label for="detail" class="col-sm-5 control-label">Movie detail</label>
+            <div class="col-sm-12">
+              <textarea formControlName="movieDesp" class="form-control moviearea px-2 py-2" name="desp" id="desp" rows="5">{{ movie.desp }}</textarea>
+            </div>
+          </div>
+
+          <!-- buttons -->
+          <div class="py-1 row" style="letter-spacing: 0.07pc">
+            <!-- back button -->
+            <div class="col-sm-6 col-md-6 text-left">
+              <button type="submit" (click)="cancel()" class="btn btn-light">Back</button>
+            </div>
+            <!-- save button and form validation -->
+            <div class="col-sm-6 col-md-6 text-right">
+              <button type="button" style="margin-left:0" [disabled]="movieForm.invalid" (click)="save()" class="btn btn-light">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

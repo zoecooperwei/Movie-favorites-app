@@ -1,0 +1,46 @@
+<!-- Main home content -->
+<!-- Home title -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-4 mx-auto text-center mt-5 mb-3 px-3 py-4" style="border: 3px solid #fff; color: #fff; min-width:400px">
+            <h5 class="mx-auto text-center mt-5 text-uppercase pb-4 px-2" style="line-height: 30px;">A movie is not a movie. It's the life. Without the movie, life would be a mistake.</h5>
+        </div>
+        <div class="col-sm-9 mx-auto mb-3">
+                <div class="line text-center mx-auto"></div>
+        </div>
+        <div class="col-sm-7 mx-auto text-center mb-5">
+            <a href=":js;" [routerLink]="['/movie']" routerLinkActive="router-link-active" class="btn btn-lg btn-outline-light mb-5"><span class="text-uppercase">get started</span></a>
+        </div>
+    </div>
+</div>
+
+<!-- Carousel with animated slides -->
+<section style="background: rgba(255,255,255,0.5)">
+    <div class="carousel py-5 mt-2">
+        <ngb-carousel style="outline:none">
+            <ng-template ngbSlide>
+                <img class="img-fluid rounded" [src]="imgpath1" alt="first slide">
+                <div class="carousel-caption">
+                    <h5 class="text-uppercase">Schidler's list</h5>
+                    <p>Save the World.</p>
+                </div>
+            </ng-template>
+
+            <ng-template ngbSlide>
+                <img class="img-fluid rounded" [src]="imgpath2" alt="second slide">
+                <div class="carousel-caption">
+                    <h5 class="text-uppercase">Leon</h5>
+                    <p>Shape of my heart.</p>
+                </div>
+            </ng-template>
+
+            <ng-template ngbSlide>
+                <img class="img-fluid rounded" [src]="imgpath3" alt="third slide">
+                <div class="carousel-caption">
+                    <h5 class="text-uppercase">Inception</h5>
+                    <p>You're waiting for a train.</p>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</section>

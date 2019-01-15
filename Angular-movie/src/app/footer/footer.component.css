@@ -1,0 +1,9 @@
+.contact li{
+    display: inline;
+}
+
+.line {
+    width: 350px !important;
+    height: 1px;
+    background-color: #fff;
+}
