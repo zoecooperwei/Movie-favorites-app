@@ -12,28 +12,28 @@ export class MovieService {
 
   // get movies data
   getMovies():Observable<Movie[]> {
-    return this.http.get<Movie[]>('http://18.188.247.235/api/movies');
+    return this.http.get<Movie[]>('http://localhost:3001/api/movies');
   }
 
   // get the movie data with given id
   getMovie(id:number):Observable<Movie> {
-    let movie = this.http.get<Movie>('http://18.188.247.235/api/movies/'+id);
+    let movie = this.http.get<Movie>('http://localhost:3001/api/movies/'+id);
     return movie;
   }
 
   // add movie data
   addMovie(movie:Movie) {
-    return this.http.post('http://18.188.247.235/api/movies', movie);
+    return this.http.post('http://localhost:3001/api/movies', movie);
   }
 
   // update movie data
   updateMovie(movie:Movie, id:number) {
-    return this.http.put('http://18.188.247.235/api/movies/'+id, movie);
+    return this.http.put('http://localhost:3001/api/movies/'+id, movie);
   }
 
   // delete movie data
   deleteMovie(movie:Movie, id:number) {
-    return this.http.delete('http://18.188.247.235/api/movies/'+id);
+    return this.http.delete('http://localhost:3001/api/movies/'+id);
   }
 }
 
