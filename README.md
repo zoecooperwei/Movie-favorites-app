@@ -31,3 +31,27 @@ Main Achievement
 2. minLength validator.
 
 3. custom character validator.
+
+Step Description
+
+The steps to reach the movie favorites app are described as follows:
+
+• Enter http://18.188.247.235:3001 in the address bar, redirect to the homepage.
+
+• Click Home link, go to the homepage.
+
+• Click Movie link/Get Started button, go to the movie page.
+
+• Click edit button, go to the movie info page and edit the movie information.
+
+• Click delete button, remove the movie.
+
+• Click New button, go to the blank movie info page and add new movie.
+
+• Search movie name, click search button, go to the movie info page directly instead of looking for it in the movie list.
+
+• Click Save button, save movie data and go back to the movie page.
+
+• Click Back button, go back to the movie page directly.
+
+• Form validation when editing the movie information.
