@@ -1,6 +1,6 @@
 # Movie-favorites-app
 
-##Main Achievement##
+## Main Achievement
 
 • Responsive Layout and Dynamic Carousel.
 
@@ -32,7 +32,7 @@
 
 3. custom character validator.
 
-##Step Description##
+## Step Description
 
 The steps to reach the movie favorites app are described as follows:
 
