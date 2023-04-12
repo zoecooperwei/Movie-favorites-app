@@ -36,7 +36,7 @@
 
 The steps to reach the movie favorites app are described as follows:
 
-• Enter http://18.188.247.235:3001 in the address bar, redirect to the homepage.
+• Enter http://18.188.247.235:3001 in the address bar, redirect to the homepage. [!The web URL no longer works due to the free trial expiration of AWS EC2 service]
 
 • Click Home link, go to the homepage.
 
